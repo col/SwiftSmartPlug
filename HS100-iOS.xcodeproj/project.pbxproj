@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFBC90611E5F378700FE15D1 /* SmartPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBC90601E5F378700FE15D1 /* SmartPlug.swift */; };
 		EFDC62751E5EC87A004A265B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC62741E5EC87A004A265B /* AppDelegate.swift */; };
 		EFDC62771E5EC87A004A265B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC62761E5EC87A004A265B /* ViewController.swift */; };
 		EFDC627A1E5EC87A004A265B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDC62781E5EC87A004A265B /* Main.storyboard */; };
 		EFDC627C1E5EC87A004A265B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFDC627B1E5EC87A004A265B /* Assets.xcassets */; };
 		EFDC627F1E5EC87A004A265B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDC627D1E5EC87A004A265B /* LaunchScreen.storyboard */; };
-		EFDC628A1E5EC87A004A265B /* HS100_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC62891E5EC87A004A265B /* HS100_iOSTests.swift */; };
+		EFDC62951E5EC8B9004A265B /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDC62941E5EC8B9004A265B /* Socket.framework */; };
+		EFDC62961E5EC8B9004A265B /* Socket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFDC62941E5EC8B9004A265B /* Socket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFDC629A1E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC62991E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift */; };
+		EFDC629C1E5EDE9D004A265B /* TPLinkSmartHomeProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC629B1E5EDE9D004A265B /* TPLinkSmartHomeProtocolTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +29,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EFDC62971E5EC8B9004A265B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EFDC62961E5EC8B9004A265B /* Socket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EFBC90601E5F378700FE15D1 /* SmartPlug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartPlug.swift; sourceTree = "<group>"; };
 		EFDC62711E5EC87A004A265B /* HS100-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HS100-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDC62741E5EC87A004A265B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFDC62761E5EC87A004A265B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,8 +53,10 @@
 		EFDC627E1E5EC87A004A265B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFDC62801E5EC87A004A265B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFDC62851E5EC87A004A265B /* HS100-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HS100-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFDC62891E5EC87A004A265B /* HS100_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HS100_iOSTests.swift; sourceTree = "<group>"; };
 		EFDC628B1E5EC87A004A265B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDC62941E5EC8B9004A265B /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = Carthage/Build/iOS/Socket.framework; sourceTree = "<group>"; };
+		EFDC62991E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPLinkSmartHomeProtocol.swift; sourceTree = "<group>"; };
+		EFDC629B1E5EDE9D004A265B /* TPLinkSmartHomeProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPLinkSmartHomeProtocolTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDC62951E5EC8B9004A265B /* Socket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +78,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFBC905F1E5F36BD00FE15D1 /* TP-LinkSmartPlug */ = {
+			isa = PBXGroup;
+			children = (
+				EFBC90601E5F378700FE15D1 /* SmartPlug.swift */,
+			);
+			name = "TP-LinkSmartPlug";
+			sourceTree = "<group>";
+		};
 		EFDC62681E5EC87A004A265B = {
 			isa = PBXGroup;
 			children = (
+				EFDC62981E5EC8C4004A265B /* Frameworks */,
 				EFDC62731E5EC87A004A265B /* HS100-iOS */,
 				EFDC62881E5EC87A004A265B /* HS100-iOSTests */,
 				EFDC62721E5EC87A004A265B /* Products */,
@@ -77,12 +108,14 @@
 		EFDC62731E5EC87A004A265B /* HS100-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EFBC905F1E5F36BD00FE15D1 /* TP-LinkSmartPlug */,
 				EFDC62741E5EC87A004A265B /* AppDelegate.swift */,
 				EFDC62761E5EC87A004A265B /* ViewController.swift */,
 				EFDC62781E5EC87A004A265B /* Main.storyboard */,
 				EFDC627B1E5EC87A004A265B /* Assets.xcassets */,
 				EFDC627D1E5EC87A004A265B /* LaunchScreen.storyboard */,
 				EFDC62801E5EC87A004A265B /* Info.plist */,
+				EFDC62991E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift */,
 			);
 			path = "HS100-iOS";
 			sourceTree = "<group>";
@@ -90,10 +123,18 @@
 		EFDC62881E5EC87A004A265B /* HS100-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				EFDC62891E5EC87A004A265B /* HS100_iOSTests.swift */,
+				EFDC629B1E5EDE9D004A265B /* TPLinkSmartHomeProtocolTests.swift */,
 				EFDC628B1E5EC87A004A265B /* Info.plist */,
 			);
 			path = "HS100-iOSTests";
+			sourceTree = "<group>";
+		};
+		EFDC62981E5EC8C4004A265B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFDC62941E5EC8B9004A265B /* Socket.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +147,7 @@
 				EFDC626D1E5EC87A004A265B /* Sources */,
 				EFDC626E1E5EC87A004A265B /* Frameworks */,
 				EFDC626F1E5EC87A004A265B /* Resources */,
+				EFDC62971E5EC8B9004A265B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDC629A1E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift in Sources */,
+				EFBC90611E5F378700FE15D1 /* SmartPlug.swift in Sources */,
 				EFDC62771E5EC87A004A265B /* ViewController.swift in Sources */,
 				EFDC62751E5EC87A004A265B /* AppDelegate.swift in Sources */,
 			);
@@ -210,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFDC628A1E5EC87A004A265B /* HS100_iOSTests.swift in Sources */,
+				EFDC629C1E5EDE9D004A265B /* TPLinkSmartHomeProtocolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +386,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "HS100-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twsg.HS100-iOS";
@@ -355,6 +403,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "HS100-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.twsg.HS100-iOS";
@@ -412,6 +464,7 @@
 				EFDC62901E5EC87A004A265B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFDC62911E5EC87A004A265B /* Build configuration list for PBXNativeTarget "HS100-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +473,7 @@
 				EFDC62931E5EC87A004A265B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

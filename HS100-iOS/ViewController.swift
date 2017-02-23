@@ -7,19 +7,26 @@
 //
 
 import UIKit
+import Socket
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    @IBAction
+    func buttonPressed() {
+        print("buttonPressed")
+        do {
+            let smartPlug = SmartPlug(host: "192.168.0.162")
+            try smartPlug.connect()
+            let sysInfo = smartPlug.sysInfo()
+            print("SysInfo: \(sysInfo)")
+        } catch {
+            print("Exception \(error.localizedDescription)")
+        }
     }
-
-
+    
 }
 
