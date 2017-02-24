@@ -123,4 +123,9 @@ class SmartPlug {
         let _ = query(target: "system", command: "set_led_off", args: ["off": state ? 0 : 1])
     }
     
+    func setNetwork(ssid: String, password: String, keyType: Int) {
+        let response = query(target: "netif", command: "set_stainfo", args: ["ssid": ssid, "password": password, "key_type": 3])
+        print("response = \(response)")
+    }
+    
 }
