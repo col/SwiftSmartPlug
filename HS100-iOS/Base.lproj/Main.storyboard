@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,29 +22,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ae9-bC-Cr7">
-                                <rect key="frame" x="159" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pV-YA-f94">
-                                <rect key="frame" x="159" y="318" width="57" height="30"/>
-                                <state key="normal" title="Button 1"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alias" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u36-xN-1Jf">
+                                <rect key="frame" x="16" y="58" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mac Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpG-up-gDK">
+                                <rect key="frame" x="16" y="96" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phn-7Q-V0v">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zN1-TP-fNx">
+                                <rect key="frame" x="310" y="134" width="51" height="31"/>
                                 <connections>
-                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmq-9T-hZm"/>
+                                    <action selector="stateSwitchChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="j8E-pf-iRm"/>
                                 </connections>
-                            </button>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hardware Info" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6mc-Nq-ZdS">
+                                <rect key="frame" x="16" y="397" width="343" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="ZQg-2E-HGk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5NS-zs-DQo">
+                                <rect key="frame" x="310" y="173" width="51" height="31"/>
+                                <connections>
+                                    <action selector="ledStateSwitchChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="Ru8-iy-Txc"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch On / Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOY-si-jIv">
+                                <rect key="frame" x="16" y="139" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LED On / Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4m-PA-hKv">
+                                <rect key="frame" x="16" y="178" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2pV-YA-f94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Ro-eO-Qel"/>
-                            <constraint firstItem="2pV-YA-f94" firstAttribute="leading" secondItem="ae9-bC-Cr7" secondAttribute="leading" id="HS9-kQ-Z5M"/>
-                            <constraint firstItem="2pV-YA-f94" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ks7-Nl-FhD"/>
-                            <constraint firstItem="2pV-YA-f94" firstAttribute="baseline" secondItem="ae9-bC-Cr7" secondAttribute="baseline" id="rXR-3F-arP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6mc-Nq-ZdS" secondAttribute="trailing" id="3FT-YV-tEe"/>
+                            <constraint firstItem="zN1-TP-fNx" firstAttribute="leading" secondItem="bOY-si-jIv" secondAttribute="trailing" constant="8" id="79A-Wg-rEX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5NS-zs-DQo" secondAttribute="trailing" id="9Hs-tY-LEA"/>
+                            <constraint firstItem="5NS-zs-DQo" firstAttribute="leading" secondItem="L4m-PA-hKv" secondAttribute="trailing" constant="8" id="Fzu-pE-GsC"/>
+                            <constraint firstItem="gpG-up-gDK" firstAttribute="top" secondItem="u36-xN-1Jf" secondAttribute="bottom" constant="8" symbolic="YES" id="GRb-db-9Vu"/>
+                            <constraint firstItem="u36-xN-1Jf" firstAttribute="leading" secondItem="phn-7Q-V0v" secondAttribute="leading" id="MjZ-EJ-aFS"/>
+                            <constraint firstItem="bOY-si-jIv" firstAttribute="top" secondItem="gpG-up-gDK" secondAttribute="bottom" constant="13" id="Mtq-iB-tD9"/>
+                            <constraint firstItem="u36-xN-1Jf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OWt-SO-Cpo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6mc-Nq-ZdS" secondAttribute="bottom" constant="20" id="Ph9-1d-AzC"/>
+                            <constraint firstItem="5NS-zs-DQo" firstAttribute="top" secondItem="zN1-TP-fNx" secondAttribute="bottom" constant="8" id="Vz7-81-Klr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="L4m-PA-hKv" secondAttribute="leading" id="Xet-at-w5g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zN1-TP-fNx" secondAttribute="trailing" id="bW0-Qa-pDt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6mc-Nq-ZdS" secondAttribute="leading" id="lAA-Ou-9he"/>
+                            <constraint firstItem="u36-xN-1Jf" firstAttribute="top" secondItem="phn-7Q-V0v" secondAttribute="bottom" constant="8" symbolic="YES" id="mQ2-V0-2Gw"/>
+                            <constraint firstItem="L4m-PA-hKv" firstAttribute="top" secondItem="bOY-si-jIv" secondAttribute="bottom" constant="18" id="mdB-5G-ZIT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bOY-si-jIv" secondAttribute="leading" id="oRH-Nx-hT6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gpG-up-gDK" secondAttribute="trailing" id="p1b-b4-aOA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u36-xN-1Jf" secondAttribute="trailing" id="pAc-hJ-gXj"/>
+                            <constraint firstItem="zN1-TP-fNx" firstAttribute="top" secondItem="gpG-up-gDK" secondAttribute="bottom" constant="8" symbolic="YES" id="pgG-MX-Mjc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="phn-7Q-V0v" secondAttribute="trailing" id="rkW-PS-k2x"/>
+                            <constraint firstItem="u36-xN-1Jf" firstAttribute="leading" secondItem="gpG-up-gDK" secondAttribute="leading" id="wuV-xZ-Zme"/>
+                            <constraint firstItem="phn-7Q-V0v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="z5f-6I-3FG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aliasField" destination="u36-xN-1Jf" id="dcu-tP-vvR"/>
+                        <outlet property="hardwareInfo" destination="6mc-Nq-ZdS" id="2EZ-Yh-3f9"/>
+                        <outlet property="ledStateSwitch" destination="5NS-zs-DQo" id="NDi-O1-4Aq"/>
+                        <outlet property="macField" destination="gpG-up-gDK" id="BOo-E5-jY7"/>
+                        <outlet property="modelField" destination="phn-7Q-V0v" id="YjU-0g-Vpx"/>
+                        <outlet property="stateSwitch" destination="zN1-TP-fNx" id="p13-eT-L6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EFBC90611E5F378700FE15D1 /* SmartPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBC90601E5F378700FE15D1 /* SmartPlug.swift */; };
+		EFBC90631E5FBDA400FE15D1 /* SmartPlugJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBC90621E5FBDA400FE15D1 /* SmartPlugJSON.swift */; };
 		EFDC62751E5EC87A004A265B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC62741E5EC87A004A265B /* AppDelegate.swift */; };
 		EFDC62771E5EC87A004A265B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC62761E5EC87A004A265B /* ViewController.swift */; };
 		EFDC627A1E5EC87A004A265B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDC62781E5EC87A004A265B /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		EFBC90601E5F378700FE15D1 /* SmartPlug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartPlug.swift; sourceTree = "<group>"; };
+		EFBC90621E5FBDA400FE15D1 /* SmartPlugJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartPlugJSON.swift; sourceTree = "<group>"; };
 		EFDC62711E5EC87A004A265B /* HS100-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HS100-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDC62741E5EC87A004A265B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFDC62761E5EC87A004A265B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,12 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EFBC905F1E5F36BD00FE15D1 /* TP-LinkSmartPlug */ = {
+		EFBC905F1E5F36BD00FE15D1 /* SwiftSmartPlug */ = {
 			isa = PBXGroup;
 			children = (
+				EFDC62991E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift */,
 				EFBC90601E5F378700FE15D1 /* SmartPlug.swift */,
+				EFBC90621E5FBDA400FE15D1 /* SmartPlugJSON.swift */,
 			);
-			name = "TP-LinkSmartPlug";
+			name = SwiftSmartPlug;
 			sourceTree = "<group>";
 		};
 		EFDC62681E5EC87A004A265B = {
@@ -108,14 +112,13 @@
 		EFDC62731E5EC87A004A265B /* HS100-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EFBC905F1E5F36BD00FE15D1 /* TP-LinkSmartPlug */,
+				EFBC905F1E5F36BD00FE15D1 /* SwiftSmartPlug */,
 				EFDC62741E5EC87A004A265B /* AppDelegate.swift */,
 				EFDC62761E5EC87A004A265B /* ViewController.swift */,
 				EFDC62781E5EC87A004A265B /* Main.storyboard */,
 				EFDC627B1E5EC87A004A265B /* Assets.xcassets */,
 				EFDC627D1E5EC87A004A265B /* LaunchScreen.storyboard */,
 				EFDC62801E5EC87A004A265B /* Info.plist */,
-				EFDC62991E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift */,
 			);
 			path = "HS100-iOS";
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				EFDC629A1E5EDE66004A265B /* TPLinkSmartHomeProtocol.swift in Sources */,
 				EFBC90611E5F378700FE15D1 /* SmartPlug.swift in Sources */,
+				EFBC90631E5FBDA400FE15D1 /* SmartPlugJSON.swift in Sources */,
 				EFDC62771E5EC87A004A265B /* ViewController.swift in Sources */,
 				EFDC62751E5EC87A004A265B /* AppDelegate.swift in Sources */,
 			);
@@ -328,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -372,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
